@@ -99,6 +99,9 @@
 
       // Init flatpickr
       this.fp = new Flatpickr(this.getElem(), safeConfig);
+
+      // Emits a event with the flatpickr instance
+      this.$emit('onInstanceReady', this.fp)
     },
     methods: {
       /**
